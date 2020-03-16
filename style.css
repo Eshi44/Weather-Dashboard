@@ -37,6 +37,9 @@ p {
 .container {
   margin: 0%;
 }
+.tempFive {
+  padding-bottom: 0rem;
+}
 
 #title{
   font-size: 30px;
@@ -71,4 +74,11 @@ a#nav-text.navbar-brand {
 
 #btn {
   background-color: #007bff;
+}
+
+#weatherIcon1, #weatherIcon2, #weatherIcon3, #weatherIcon4, #weatherIcon5 {
+
+  float: left;
+  padding-bottom: 0rem;
+  padding-right: 5rem;
 }
