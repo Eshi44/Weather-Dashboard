@@ -25,6 +25,10 @@ p {
   font-size: 20px;
 }
 
+#five-day-forecast-cards {
+  color: white;
+}
+
 #h4 {
     font-size: 30px;
     color: #343a40;
@@ -37,7 +41,7 @@ p {
 #title{
   font-size: 30px;
   color: #343a40;
-  width: 21rem;
+  width: 25rem;
   
 }
 img {

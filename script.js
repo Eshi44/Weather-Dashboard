@@ -27,7 +27,7 @@ $(document).ready(function() {
             "&APIkey=d1817ee7c3ae109bbf6ea614ec59a4cb" + "&lat={lat}&lon={lon}",
             method: "GET",
          }).then(function(data) {
-                console.log(data);
+                //console.log(data);
                
 
  
@@ -50,8 +50,69 @@ $(document).ready(function() {
                 wind.append(" " + data.wind.speed + "MPH");
 
             });
+            
+            $.ajax({
+                url: 'http://api.openweathermap.org/data/2.5/forecast/?q=' + city +"&units=imperial" +
+                "&APIkey=d1817ee7c3ae109bbf6ea614ec59a4cb" + "&cnt=5",
+                method: "GET",
+             }).then(function(data) {
+                    console.log(data);
+                    var dateOne = moment().add(1, "days").format('L');
+                    var dateTwo = moment().add(2, "days").format('L');
+                    var dateThree = moment().add(3, "days").format('L');
+                    var dateFour = moment().add(4, "days").format('L');
+                    var dateFive = moment().add(5, "days").format('L');
 
-        
+                   var fiveDayWeekDates = [dateOne,dateTwo,dateThree,dateFour,dateFive ];
+
+                   console.log(fiveDayWeekDates);
+
+                   var dateTitle = document.getElementsByClassName("datetitle");
+                
+                   for (var i=0; i<fiveDayWeekDates.length; i++) {
+                      dateTitle[i].innerHTML=fiveDayWeekDates[i];
+                      console.log(fiveDayWeekDates.length);
+                   }
+
+                   });
+
+
+            $.ajax({
+                url: 'http://api.openweathermap.org/data/2.5/forecast/?q=' + city +"&units=imperial" +
+                "&APIkey=d1817ee7c3ae109bbf6ea614ec59a4cb" + "&cnt=5",
+                method: "GET",
+             }).then(function(data) {
+                    console.log(data);
+
+                     var array = [data.list[0].main.temp, data.list[1].main.temp, data.list[2].main.temp, 
+                     data.list[3].main.temp, data.list[4].main.temp];
+ 
+                     //console.log(array);
+                     
+                     var temperatureForecast = $(".tempFive");
+                
+                 for (var i=0; i<array.length; i++) {
+                    temperatureForecast[i].append("Temp:" + array[i] + "°F");
+                    console.log(array.length);
+                    //console.log(temperatureForecast);
+
+
+                 }
+
+
+
+
+
+
+
+
+
+
+                });
+    
+
+
+
 
     });
 
