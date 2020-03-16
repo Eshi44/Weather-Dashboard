@@ -1,4 +1,4 @@
-console.log("Hello World");
+//console.log("Hello World");
 //use bootstrap relative link
 //create a nav bar
 //create a container
@@ -19,20 +19,35 @@ $(document).ready(function() {
             
         var city = $("#city").val();
 
+
         //console.log(city);
 
         $.ajax({
-            url: 'http://api.openweathermap.org/data/2.5/weather?q=' +city + "&units=imperial" +
-            "&APIkey=d1817ee7c3ae109bbf6ea614ec59a4cb",
+            url: 'http://api.openweathermap.org/data/2.5/weather/?q=' + city +"&units=imperial" +
+            "&APIkey=d1817ee7c3ae109bbf6ea614ec59a4cb" + "&lat={lat}&lon={lon}",
             method: "GET",
          }).then(function(data) {
                 console.log(data);
-                console.log(data.clouds);
+               
+
+ 
 
                 var date = moment().format('L');
-                var cardTitle = $(".card-title");
+                var cardTitle = $("#title");
+                var iconurl = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
                 cardTitle.append(city +" ("+ date +")");
+                $('#wicon').attr('src', iconurl);
 
+                var temp = $("#temp");
+                temp.append(" " + data.main.temp + "°F");
+
+                //console.log(data.main.temp);
+
+                var humidity = $("#humidity");
+                humidity.append(" " + data.main.humidity + "%");
+
+                var wind = $("#wind");
+                wind.append(" " + data.wind.speed + "MPH");
 
             });
 

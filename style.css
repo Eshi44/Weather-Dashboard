@@ -34,10 +34,17 @@ p {
   margin: 0%;
 }
 
-h5.card-title {
+#title{
   font-size: 30px;
   color: #343a40;
+  width: 21rem;
+  
 }
+img {
+    float: right;
+
+}
+
 
 #five-day-forecast-cards {
   background-color: #007bff;
