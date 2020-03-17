@@ -5,6 +5,25 @@
   background-color: #f8f9fa;
 }
 
+#savedCities {
+
+  background-color: #f8f9fa;
+  height: 52rem;
+  
+}
+
+.inputCityName {
+  list-style-type: none;
+ 
+}
+
+div.inputCityName.list-group.list-group-flush.list-group-item {
+  padding: 0rem;
+  padding-bottom: .5rem;
+  padding-left: .5rem;
+  
+}
+
 .row {
   height: 55rem;
 }
