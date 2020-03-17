@@ -31,6 +31,9 @@ $(document).ready(function() {
     }
     city = $("#city").val();
     localStorage.setItem("city", JSON.stringify(city));
+    city =  localStorage.getItem("city");
+    console.log(city);
+    console.log("setting weather first time");
     setWeather();
   });
 });
