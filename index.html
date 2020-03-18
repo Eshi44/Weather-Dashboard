@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"/>
+    </head>
+    <body>
+        <nav class="navbar-nav mx-auto" id="nav">
+            <a class="navbar-brand text-center" id="nav-text">Weather Dashboard</a>
+          </nav>
+        </div>
+
+<div container>
+<div class=row>
+
+    <div class="col-3">
+        <h3 id="h3">Search for a City:</h3>
+        <div class="input-group">
+            <input class="form-control" id="city">
+            <span class="input-group-btn">
+                <button class="btn btn-info clear" id="btn"> <i class="fas fa-search"></i></button>
+            </span>
+        </div>
+        <div class="inputCityName"></div>
+    </div>
+
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body">
+                
+              <h5 class="card-title"><h2 id="title"><img id="wicon" src=""></h2></h5>
+              
+              <p class="card-text">
+                  <p id="temp">Temperature:</p>
+                  <p id="humidity">Humidity:</p>
+                  <p id="wind">Wind Speed:</p>
+                  <p id="uvi">UV Index:</p>
+              </p>
+            </div>
+          </div>
+          <br></br>
+          <h4 id="h4">5-Day Forecast:</h4>
+          <div class="card forecast" id=five-day-forecast-cards>
+            <div class="card-body">
+              <h5 class="card-title datetitle"></h5>
+              <p id="weatherIcon1"><img id="wicon1" src=""></p>
+              <p class = "tempFive"></p>
+              <p class = "humidFive"></p>
+            </div>
+          </div>
+          <div class="card forecast" id=five-day-forecast-cards>
+            <div class="card-body">
+              <h5 class="card-title datetitle"></h5>
+              <p id="weatherIcon2"><img id="wicon2" src=""></p>
+              <p class = "tempFive"></p>
+              <p class = "humidFive"></p>
+            </div>
+          </div>
+          
+          <div class="card forecast" id=five-day-forecast-cards>
+            <div class="card-body">
+              <h5 class="card-title datetitle"></h5>
+              <p id="weatherIcon3"><img id="wicon3" src=""></p>
+              <p class = "tempFive"></p>
+              <p class = "humidFive"></p>
+            </div>
+          </div>
+          <div class="card forecast" id=five-day-forecast-cards>
+            <div class="card-body">
+              <h5 class="card-title datetitle"></h5>
+              <p id="weatherIcon4"><img id="wicon4" src=""></p>
+              <p class = "tempFive"></p>
+              <p class = "humidFive"></p>
+            </div>
+          </div>
+          <div class="card forecast" id=five-day-forecast-cards>
+            <div class="card-body">
+              <h5 class="card-title datetitle"></h5>
+              <p id="weatherIcon5"><img id="wicon5" src=""></p>
+              <p class = "tempFive"></p>
+              <p class = "humidFive"></p>
+            </div>
+          </div>
+
+
+    </div>
+
+</div>
+</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
