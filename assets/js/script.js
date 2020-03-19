@@ -54,7 +54,7 @@ function setWeather() {
   //ajax for current day weather
   $.ajax({
     url:
-      "https://api.openweathermap.org/data/2.5/weather/?q=" +
+      "api.openweathermap.org/data/2.5/weather/?q=" +
       city +
       "&units=imperial" +
       "&APIkey=d1817ee7c3ae109bbf6ea614ec59a4cb" +
@@ -66,7 +66,7 @@ function setWeather() {
     var date = moment().format("L");
     var cardTitle = $("#title");
     var iconurl =
-      "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+      "openweathermap.org/img/w/" + data.weather[0].icon + ".png";
     cardTitle.append(city + " (" + date + ")");
     $("#wicon").attr("src", iconurl);
 
@@ -84,7 +84,7 @@ function setWeather() {
   //ajax for five day forecast
   $.ajax({
     url:
-      "https://api.openweathermap.org/data/2.5/forecast/?q=" +
+      "api.openweathermap.org/data/2.5/forecast/?q=" +
       city +
       "&units=imperial" +
       "&APIkey=d1817ee7c3ae109bbf6ea614ec59a4cb" +
@@ -155,7 +155,7 @@ function setWeather() {
     //added weather icons to five day forecast
     var weatherIcon1 = $("#weatherIcon1");
     var iconurl1 =
-      "https://openweathermap.org/img/w/" +
+      "openweathermap.org/img/w/" +
       data.list[0].weather[0].icon +
       ".png";
     weatherIcon1.append();
@@ -163,7 +163,7 @@ function setWeather() {
 
     var weatherIcon2 = $("#weatherIcon2");
     var iconurl2 =
-      "https://openweathermap.org/img/w/" +
+      "openweathermap.org/img/w/" +
       data.list[1].weather[0].icon +
       ".png";
     weatherIcon2.append();
@@ -171,7 +171,7 @@ function setWeather() {
 
     var weatherIcon3 = $("#weatherIcon3");
     var iconurl3 =
-      "https://openweathermap.org/img/w/" +
+      "openweathermap.org/img/w/" +
       data.list[2].weather[0].icon +
       ".png";
     weatherIcon3.append();
@@ -179,7 +179,7 @@ function setWeather() {
 
     var weatherIcon4 = $("#weatherIcon4");
     var iconurl4 =
-      "https://openweathermap.org/img/w/" +
+      "openweathermap.org/img/w/" +
       data.list[3].weather[0].icon +
       ".png";
     weatherIcon4.append();
@@ -187,7 +187,7 @@ function setWeather() {
 
     var weatherIcon5 = $("#weatherIcon5");
     var iconurl5 =
-      "https://openweathermap.org/img/w/" +
+      "openweathermap.org/img/w/" +
       data.list[4].weather[0].icon +
       ".png";
     weatherIcon5.append();
