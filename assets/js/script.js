@@ -1,4 +1,4 @@
-//console.log("Hello World");
+
 
 //define city variable
 var city;
